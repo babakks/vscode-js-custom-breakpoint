@@ -2,7 +2,7 @@
     "name": "vscode-js-custom-breakpoint",
     "displayName": "JS/TS Custom Breakpoint",
     "description": "A VS Code extension to set breakpoints at specific JavaScript call-stack locations",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "babakks",
     "repository": {
         "type": "git",
@@ -38,6 +38,7 @@
     "activationEvents": [
         "onStartupFinished"
     ],
+    "icon": "image/icon.png",
     "main": "./out/extension.js",
     "contributes": {
         "commands": [
