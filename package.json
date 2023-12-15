@@ -1,0 +1,77 @@
+{
+    "name": "vscode-js-custom-breakpoint",
+    "displayName": "JS/TS Custom Breakpoint",
+    "description": "A VS Code extension to set breakpoints at specific JavaScript call-stack locations",
+    "version": "0.0.1",
+    "publisher": "babakks",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/babakks/vscode-js-custom-breakpoint"
+    },
+    "engines": {
+        "vscode": "^1.70.0"
+    },
+    "categories": [
+        "Other",
+        "Debuggers"
+    ],
+    "keywords": [
+        "js",
+        "javascript",
+        "ts",
+        "typescript",
+        "debug",
+        "breakpoint",
+        "call-stack",
+        "callstack",
+        "stack-trace",
+        "stacktrace",
+        "stack-frame",
+        "stackframe",
+        "stack",
+        "trace",
+        "frame",
+        "call",
+        "bind",
+        "bound"
+    ],
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "vscode-custom-breakpoint.setBreakpointAtCursor",
+                "title": "JS/TS Custom Breakpoint: Set Call-Stack Bound Breakpoint",
+                "shortTitle": "Set Breakpoint at Cursor",
+                "icon": "$(debug-breakpoint)"
+            },
+            {
+                "command": "vscode-custom-breakpoint.setBreakpointAtCursorStrict",
+                "title": "JS/TS Custom Breakpoint: Set Call-Stack Bound Breakpoint (Strict)",
+                "shortTitle": "Set Breakpoint at Cursor (Bound to Line Numbers)",
+                "icon": "$(debug-breakpoint)"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile && npm run lint",
+        "lint": "eslint src --ext ts",
+        "test": "vscode-test"
+    },
+    "devDependencies": {
+        "@types/mocha": "^10.0.6",
+        "@types/node": "18.x",
+        "@types/vscode": "^1.70.0",
+        "@typescript-eslint/eslint-plugin": "^6.13.1",
+        "@typescript-eslint/parser": "^6.13.1",
+        "@vscode/test-cli": "^0.0.4",
+        "@vscode/test-electron": "^2.3.8",
+        "eslint": "^8.54.0",
+        "typescript": "^5.3.2"
+    }
+}
